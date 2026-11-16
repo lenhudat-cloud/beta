@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Liên hệ | Công ty Cổ phần Phương Nam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Source+Serif+4:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<a class="logo" href="index.html">Phương Nam JSC</a>
+<nav aria-label="Điều hướng chính">
+<a href="gioi-thieu.html">Giới thiệu</a>
+<a href="linh-vuc.html">Lĩnh vực</a>
+<a href="co-dong.html">Quan hệ cổ đông</a>
+<a href="lien-he.html" aria-current="page">Liên hệ</a>
+</nav>
+</div>
+</header>
+<main>
+<section>
+<div class="wrap contact">
+<div>
+<h2 class="t">Liên hệ</h2>
+<address>
+Tầng 12, Tòa nhà Phương Nam, Quận 1, TP. Hồ Chí Minh<br>
+Điện thoại: 028 3800 0000<br>
+Email: <a href="mailto:info@phuongnam.example">info@phuongnam.example</a><br>
+Giờ làm việc: 8:00 đến 17:30, thứ Hai đến thứ Sáu
+</address>
+</div>
+<form id="f">
+<label>Họ và tên<input name="n" required autocomplete="name"></label>
+<label>Email<input name="e" type="email" required autocomplete="email"></label>
+<label>Nội dung<textarea name="m" rows="4" required></textarea></label>
+<button class="btn p" type="submit">Gửi liên hệ</button>
+<p id="ok" role="status"></p>
+</form>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+<span>© 2026 Công ty Cổ phần Phương Nam. Mã số doanh nghiệp 0312 345 678.</span>
+<span>Giấy chứng nhận đăng ký doanh nghiệp do Sở Tài chính TP. Hồ Chí Minh cấp.</span>
+</div>
+</footer>
+<script>
+document.getElementById('f').addEventListener('submit',function(e){
+e.preventDefault();
+var n=this.n.value.trim();
+document.getElementById('ok').textContent='Cảm ơn '+n+'. Chúng tôi sẽ phản hồi qua email trong 1 ngày làm việc. (Bản mẫu, chưa kết nối máy chủ.)';
+this.reset();
+});
+</script>
+</body>
+</html>
